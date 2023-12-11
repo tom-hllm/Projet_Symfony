@@ -1,0 +1,66 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}Commande{% endblock %}
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Commande de Menu</title>
+
+</head>
+<body>
+    <header>
+        <h1>Commande de Menu</h1>
+    </header>
+
+    <section>
+        <form action="/process_order" method="post">
+            <h2>Choisissez vos plats :</h2>
+
+            <label for="appetizer">Entrée :</label>
+            <select id="appetizer" name="appetizer" required>
+                <option value="salad">Salade</option>
+                <option value="soup">Soupe</option>
+                <!-- Ajoutez d'autres options d'entrées -->
+
+            </select>
+
+            <label for="main_course">Plat principal :</label>
+            <select id="main_course" name="main_course" required>
+                <option value="steak">Côte de Boeuf</option>
+                <option value="pasta">Pâtes Carbonara</option>
+          
+
+            </select>
+
+            <label for="dessert">Dessert :</label>
+            <select id="dessert" name="dessert" required>
+                <option value="cake">Gâteau</option>
+                <option value="ice_cream">Glace</option>
+           
+
+            </select>
+
+            <label for="drink">Boisson :</label>
+            <select id="drink" name="drink" required>
+                <option value="water">Eau</option>
+                <option value="soda">Soda</option>
+                <option value="vin">Vin</option>
+      
+
+            </select>
+
+
+
+            <button type="submit">Passer la commande</button>
+        </form>
+    </section>
+
+
+
+
+</body>
+</html>
